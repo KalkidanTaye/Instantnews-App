@@ -1,9 +1,89 @@
+/* Custom Fonts */
+// @include font-face('open_sansbold', $weight: normal, $style: normal);
+// @font-face{
+//     font-family: 'open_sansbold';
+//     src: url('opensans-bold-webfont.woff2') format('woff2'),
+//          url('opensans-bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// } 
+  
+
+
+
+// @font-face {
+//     font-family: 'open_sansbold_italic';
+//     src: url('opensans-bolditalic-webfont.woff2') format('woff2'),
+//          url('opensans-bolditalic-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'open_sanslight';
+//     src: url('opensans-light-webfont.woff2') format('woff2'),
+//          url('opensans-light-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'open_sanslight_italic';
+//     src: url('opensans-lightitalic-webfont.woff2') format('woff2'),
+//          url('opensans-lightitalic-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+/* End of Custom Fonts */
+
+
 body{
     background: black;
 }
-p{
-    color: white
+
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer"
 }
-.logo{
-    background-image: url("assets/images/nyt-logo.svg")
+.menu{
+   
+    img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 40px;
+height: auto;
+width: 40%;
+max-width: 100%;
+    }
+    p {
+        color: white;   
+        text-align: center;
+        font-family: 'open_sansbold';
+        font-size: 12px;
+    }
+    select{
+        color: white;
+        text-align: center;
+        text-align-last: center;
+    }
+}
+.display_list{
+    img{
+        
+    }
+}
+  
+.footer{
+    color: white;
 }

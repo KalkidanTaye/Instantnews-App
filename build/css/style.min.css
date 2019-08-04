@@ -1,1 +1,1 @@
-body{background:#000}p{color:#fff}.logo{background-image:url(assets/images/nyt-logo.svg)}
+body{background:#000}.container{display:grid;height:100vh;grid-template-columns:1fr;grid-template-areas:"a a" "b c" "d d"}.menu img{display:block;margin-left:auto;margin-right:auto;margin-top:40px;height:auto;width:40%;max-width:100%}.menu p{font-family:open_sansbold;font-size:12px}.menu p,.menu select{color:#fff;text-align:center}.menu select{text-align-last:center}.footer{color:#fff}

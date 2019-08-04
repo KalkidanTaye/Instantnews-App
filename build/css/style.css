@@ -1,8 +1,34 @@
+/* Custom Fonts */
+/* End of Custom Fonts */
 body {
   background: black; }
 
-p {
-  color: white; }
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
 
-.logo {
-  background-image: url("assets/images/nyt-logo.svg"); }
+.menu img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  height: auto;
+  width: 40%;
+  max-width: 100%; }
+
+.menu p {
+  color: white;
+  text-align: center;
+  font-family: 'open_sansbold';
+  font-size: 12px; }
+
+.menu select {
+  color: white;
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center; }
+
+.footer {
+  color: white; }
