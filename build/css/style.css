@@ -3,32 +3,53 @@
 body {
   background: black; }
 
-.container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header header" "main aside" "footer footer"; }
-
 .menu img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 110px;
   height: auto;
-  width: 40%;
+  width: 60%;
   max-width: 100%; }
 
-.menu p {
+.menu h1 {
   color: white;
   text-align: center;
   font-family: 'open_sansbold';
-  font-size: 12px; }
+  font-size: 13px;
+  margin-top: 10px; }
 
 .menu select {
-  color: white;
-  text-align: center;
-  -moz-text-align-last: center;
-       text-align-last: center; }
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: 15px; }
+
+.display_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .display_list img {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 250px;
+    max-width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .display_list p {
+    color: white; }
 
 .footer {
-  color: white; }
+  color: #c2c2c2;
+  margin-top: 150px;
+  text-align: center;
+  font-size: 14px; }
