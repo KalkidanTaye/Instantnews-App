@@ -1,30 +1,46 @@
 
 $(".select-menu").change(function() {
-  
+  // $(this).toggleClass("resize");
       let $selection = $( ".select-menu option:selected" ).val();
-       console.log($selection)
-       if($selection !== '') {
+      //  console.log($selection)
+       if(($selection !== '') && ($selection !== 'home')) {
         $.getJSON('https://api.nytimes.com/svc/topstories/v2/'+$selection+'.json?api-key=6JnntmTCfFwazTbZ4Hd0rPbyYzVyUbtJ')
       
         .done(function(data) {
-          // console.log(data.results[0].title)
-          // console.log(data.results[9].multimedia[0].url)
-          // $('.display_list').append(`<img src=${data.results[0].multimedia[3].url}></img>`)
-          // $('.title').append(`<p>${data.results[0].title}</p>`)
-          $('p, img').hide()
+          // $('p, img').hide()
+          // $('p').on("mouseover", function () {
+          //   $('p').append(`<p>${data.results[1].abstract}</p>`)
+          //   })
+            
+            console.log(data.results[1].abstract);
+
+          $.each(data.results, function(key, value){
+          // console.log(value.multimedia)
           
-        $.each(data.results, function(key, value){
-          // for(let i=0;i<11; i++){
          if(value.multimedia[4].url !== '')  {
-          
-           
-            console.log(value)
-  
-           
+         
+            $('.display_list').append(`<img src=${value.multimedia[4].url}></img>`)
+            $('.display_list').append(`<p>${value.title}</p>`)
+
+            // if(){
+
+            //   $('p').on("mouseover", function () {
+            //     $('p').append(`<p>${value.abstract}</p>`)
+            //     })
+            // }
+            
+         }
+          else {
+            key++
             $('.display_list').append(`<img src=${value.multimedia[4].url}></img>`)
             $('.display_list').append(`<p>${value.title}</p>`)
           }
-        // }
+          // console.log(key)
+          // console.log(value.abstract)
+     
+        return (key<11)
+       
+        
         })
   
   
@@ -35,7 +51,7 @@ $(".select-menu").change(function() {
   
        }
        else{
-         // goes to home page
+        $('p, img').hide()
        }
           })
   
