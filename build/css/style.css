@@ -84,7 +84,9 @@ body {
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
       margin-top: -72px;
-      padding: 20px; }
+      padding: 20px;
+      left: auto;
+      right: auto; }
 
 .footer {
   color: #c2c2c2;
@@ -155,6 +157,9 @@ body {
         max-width: 35%;
         position: relative; }
       .container .display_list p {
+        -webkit-box-flex: 35%;
+            -ms-flex: 35%;
+                flex: 35%;
         display: block;
         width: 33.3%;
         max-width: 35%;

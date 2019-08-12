@@ -28,10 +28,9 @@ $(".select-menu").change(function() {
           $(".display_list").append(`<p class= "test">${value.title}</p>`);
         } else {
           key++;
-          $(".display_list").append(
-            `<img src=${value.multimedia[4].url}></img>`
-          );
           $(".display_list").append(`<p>${value.title}</p>`);
+          $(".display_list").append(`<img src=${value.multimedia[4].url}></img>`);
+         
         }
         // console.log(key)
         // console.log(value.abstract)
