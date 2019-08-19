@@ -1,7 +1,5 @@
 $(".select-menu").change(function() {
-  // $(this).toggleClass("resize");
   let $selection = $(".select-menu option:selected").val();
-  console.log($selection);
   if ($selection !== "" && $selection !== "home") {
     $.getJSON(
       "https://api.nytimes.com/svc/topstories/v2/" +
@@ -9,47 +7,47 @@ $(".select-menu").change(function() {
         ".json?api-key=6JnntmTCfFwazTbZ4Hd0rPbyYzVyUbtJ"
     )
     .done(function(data) {
-      //find a way to clear all articles currently on screen before adding the new ones
-      $("p, img").hide();
-
-      console.log(data.results[1].title)
-      
-
-
-      // console.log(data.results[1].abstract);
-
+      $("p, img").remove();      
       $.each(data.results, function(key, value) {
-        // console.log(value.multimedia)
-
-        if (value.multimedia !== "") {
-          $(".display_list").append(
-            `<img src=${value.multimedia[4].url}></img>`
-          );
-          $(".display_list").append(`<p class= "test">${value.title}</p>`);
-        } else {
-          key++;
-          $(".display_list").append(`<p>${value.title}</p>`);
-          $(".display_list").append(`<img src=${value.multimedia[4].url}></img>`);
-         
+          var i = 12, 
+          myArray = new Array(i);
+          for (i = 0; i < myArray.length; i++) {
+            if (value.multimedia[4] !== "") {
+          myArray = value.multimedia[4].url
+          console.log(myArray)
+            }
         }
-        // console.log(key)
-        // console.log(value.abstract)
-
+          $(".display_list").append(`<img src=${myArray}></img>`);
+          $(".display_list").append(`<p class= "test">${value.title}</p>`);
+        // } else {
+        //   key++;
+        // }
         return key < 11;
       });
     });
   } else {
-    $("p, img").hide();
-    $('p').hover(function(){
-      $(this).text(data.results[1].title);
-    }, function() {
-      $(this).text(data.results[1].abstract);
-    });
+    $("p, img").remove();
+    
   }
+  $('p').hover(function(){
+    $(this).text(data.results[1].title);
+  }, function() {
+    $(this).text(data.results[1].abstract);
+  });
 });
 
 
 
-// console.log(data.results[9].title)
-// console.log(data.results[9].multimedia[0].url)
-// console.log(data.results.length)
+
+
+
+
+/*
+var numberOfItems = 12;
+var myArray[];
+for (var i=0; i<numberOfItems; i++) {
+    myArray.push('');
+}
+
+
+*/

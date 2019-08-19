@@ -98,7 +98,7 @@ body{
         img{
             object-fit: cover;
             max-width: 100%;
-            vertical-align: middle;
+            vertical-align: baseline;
             justify-content: space-around;  
         }
         p{
@@ -163,29 +163,33 @@ body{
    
    .container{
        display: flex;
-       flex-wrap: wrap;
+       flex-wrap: nowrap;
        box-sizing: border-box;
        padding:0 4px;
        .display_list{
-        flex: 35%;
+        flex: 33.3%;
         justify-content: space-around;
+        position: relative;
         img{
-            // flex: 35%;
-            // object-fit: cover;
-            // height: 35%;
+            object-fit: cover;
+            height: 35%;
             height: 180px;
             width: 33.3%;
-            max-width: 35%;
-            // justify-content: space-around;
-            // vertical-align: middle;
+            max-width: 33%;
+            justify-content: space-around;
             position: relative;
+            vertical-align: baseline;
            }
-           p{
-            flex: 35%;
-            display: block;
+           p.test{
+            justify-content: space-around;
+            display: inline-block;
             width: 33.3%;
-            max-width: 35%;
+            max-width: 33%;
             position: absolute;
+            justify-content: flex-start;
+            margin-top: 110px;
+            margin-left: -33%;
+            
            }
        }
        
@@ -221,24 +225,24 @@ body{
     .container{
         display: flex;
         flex-wrap: wrap;
-        box-sizing: border-box;
         padding:0 4px;
+        position: absolute;
         .display_list{
-             
+            
          img{
-             flex: 25%;
+            justify-content: space-around;
              height: 180px;
              width: 25%;
              max-width: 25%;
-             justify-content: space-around;
              position: relative;
+             vertical-align: baseline;
             }
-            p{
-             flex: 25%;
-             width: 25%;
-             max-width: 25%;
-             justify-content: space-around;
-             position: absolute;
+            p.test{
+                justify-content: space-around;
+                width: 25%;
+                max-width: 25%;
+                position: absolute;
+                margin-left:-25%;
             }
         }
         
