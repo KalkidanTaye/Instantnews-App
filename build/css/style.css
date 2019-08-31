@@ -1,3 +1,50 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /* Custom Fonts */
 @font-face {
   font-family: 'Open Sans Light Italic';
@@ -28,6 +75,10 @@
   font-style: normal; }
 
 /* End of Custom Fonts */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
   background: black;
   color: white;
@@ -59,70 +110,6 @@ body {
   margin-bottom: 20px;
   padding-left: 30px; }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.container {
-  margin-bottom: -150px; }
-  .container .display_list {
-    position: relative; }
-    .container .display_list img {
-      -o-object-fit: cover;
-         object-fit: cover;
-      max-width: 100%;
-      vertical-align: baseline;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
-    .container .display_list p {
-      color: white;
-      font-family: 'Open Sans Light';
-      size: 16px;
-      position: absolute;
-      background: black;
-      /* Fallback color */
-      background: rgba(0, 0, 0, 0.5);
-      width: 100%;
-      margin-top: -72px;
-      padding: 20px;
-      left: auto;
-      right: auto; }
-
-.footer {
-  color: #c2c2c2;
-  margin-top: 350px;
-  text-align: center;
-  font-size: 16px;
-  font-family: 'Open Sans Light'; }
-
-@-webkit-keyframes resize-logo {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  50% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px); }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
-
-@keyframes resize-logo {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  50% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px); }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
-
-.resize {
-  -webkit-animation-name: resize-logo;
-          animation-name: resize-logo;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear; }
-
 @media only screen and (min-width: 600px) {
   .logo {
     margin-left: -380px;
@@ -135,46 +122,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 90px; }
-  .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 0 4px; }
-    .container .display_list {
-      -webkit-box-flex: 33.3%;
-          -ms-flex: 33.3%;
-              flex: 33.3%;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-      position: relative; }
-      .container .display_list img {
-        -o-object-fit: cover;
-           object-fit: cover;
-        height: 35%;
-        height: 180px;
-        width: 33.3%;
-        max-width: 33%;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-        position: relative;
-        vertical-align: baseline; }
-      .container .display_list p.test {
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-        display: inline-block;
-        width: 33.3%;
-        max-width: 33%;
-        position: absolute;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
-        margin-top: 110px;
-        margin-left: -33%; } }
+    margin-bottom: 90px; } }
 
 @media only screen and (min-width: 1240px) {
   .logo {
@@ -190,7 +138,94 @@ body {
   .menu select {
     margin-left: 350px;
     margin-right: auto;
-    margin-bottom: 120px; }
+    margin-bottom: 120px; } }
+
+.container .display_list {
+  position: relative;
+  height: 400px; }
+  .container .display_list img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .container .display_list .image {
+    top: 0; }
+  .container .display_list p {
+    color: white;
+    font-family: 'Open Sans Light';
+    size: 16px;
+    position: absolute;
+    background: black;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-top: -72px;
+    padding: 20px;
+    left: auto;
+    right: auto; }
+
+.container .gif-loader {
+  background-image: url(../../assets/images/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 40px;
+  margin-left: 230px;
+  width: 80px;
+  height: 80px; }
+
+@media only screen and (min-width: 600px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 4px; }
+    .container .display_list {
+      -webkit-box-flex: 33.3%;
+          -ms-flex: 33.3%;
+              flex: 33.3%;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      position: relative;
+      top: 0; }
+      .container .display_list img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 280px;
+        width: 33%;
+        max-width: 100%;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        position: relative;
+        vertical-align: top;
+        bottom: -100px; }
+      .container .display_list p.test {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        display: inline-block;
+        width: 33.3%;
+        max-width: 33%;
+        position: absolute;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        margin-top: 210px;
+        margin-left: -33%;
+        padding-right: 5px; }
+    .container .gif-loader {
+      background-image: url(../../assets/images/ajax-loader.gif);
+      background-repeat: no-repeat;
+      width: 100px;
+      height: 100px; } }
+
+@media only screen and (min-width: 1240px) {
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -199,21 +234,37 @@ body {
         flex-wrap: wrap;
     padding: 0 4px;
     position: absolute; }
+    .container .display_list .image {
+      vertical-align: text-top; }
     .container .display_list img {
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      height: 180px;
+      height: 300px;
       width: 25%;
       max-width: 25%;
       position: relative;
-      vertical-align: baseline; }
+      vertical-align: top;
+      float: top; }
     .container .display_list p.test {
       -ms-flex-pack: distribute;
           justify-content: space-around;
       width: 25%;
       max-width: 25%;
       position: absolute;
-      margin-left: -25%; }
+      margin-left: -25%;
+      margin-top: 230px; } }
+
+.footer {
+  color: #c2c2c2;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Open Sans Light';
+  z-index: 50; }
+
+@media only screen and (min-width: 1240px) {
   .footer {
     text-align: left;
-    margin-left: 60px; } }
+    margin-left: 60px;
+    margin-top: 200px;
+    z-index: 50; } }

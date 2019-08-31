@@ -1,0 +1,126 @@
+.container{
+    // height:400px;
+    
+     .display_list{
+         position:relative;
+         height:400px;
+         
+
+     img{
+         object-fit: cover;
+         height:400px;
+         width:100%;
+         max-width: 100%;
+         vertical-align: top;
+         justify-content: space-around;  
+       
+     }
+     .image{
+         top:0;
+     }
+     p{
+         color: white;
+         font-family: 'Open Sans Light';
+         size: 16px;
+         position: absolute;
+         background: rgb(0, 0, 0); 
+         background: rgba(0, 0, 0, 0.5); 
+         width: 100%;
+         margin-top: -72px;
+         padding: 20px;
+         left: auto;
+         right: auto;
+     }
+ 
+    }
+    .gif-loader{
+        background-image: url(../../assets/images/ajax-loader.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-top:40px;
+        margin-left: 230px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+@media only screen and (min-width: 600px){
+   
+   .container{
+       display: flex;
+       flex-wrap: nowrap;
+       box-sizing: border-box;
+       padding:0 4px;
+       .display_list{
+        flex: 33.3%;
+        justify-content: space-around;
+        position: relative;
+        top:0;
+        img{
+            object-fit: cover;
+            height: 280px;
+            width: 33%;
+            max-width: 100%;
+            justify-content: space-around;
+            position: relative;
+            vertical-align: top;
+            bottom:-100px;
+           }
+           p.test{
+            justify-content: space-around;
+            display: inline-block;
+            width: 33.3%;
+            max-width: 33%;
+            position: absolute;
+            justify-content: flex-start;
+            margin-top: 210px;
+            margin-left: -33%;
+            padding-right: 5px;
+            
+           }
+       }
+       .gif-loader{
+        background-image: url(../../assets/images/ajax-loader.gif);
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+    }  
+   }    
+
+}
+
+   @media only screen and (min-width: 1240px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        padding:0 4px;
+        position: absolute;
+        .display_list{
+           .image{
+            vertical-align: text-top;
+            }
+         img{
+            justify-content: space-around;
+            height: 300px;
+            width: 25%;
+            max-width: 25%;
+            position: relative;
+            vertical-align: top;
+            float: top;
+            //  vertical-align: text-top;
+            }
+            p.test{
+                justify-content: space-around;
+                width: 25%;
+                max-width: 25%;
+                position: absolute;
+                margin-left:-25%;
+                margin-top: 230px;
+            }
+        }
+        
+    }    
+   
+}

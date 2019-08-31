@@ -1,5 +1,9 @@
+$(document).ready(function(){
 $(".select-menu").change(function() {
   let $selection = $(".select-menu option:selected").val();
+
+  // $('.container').addClass('gif-loader');
+
   if ($selection !== "" && $selection !== "home") {
     $.getJSON(
       "https://api.nytimes.com/svc/topstories/v2/" +
@@ -9,16 +13,19 @@ $(".select-menu").change(function() {
     .done(function(data) {
       $("p, img").remove();      
       $.each(data.results, function(key, value) {
-          var i = 12, 
+          let i = 12, 
           myArray = new Array(i);
           for (i = 0; i < myArray.length; i++) {
             if (value.multimedia[4] !== "") {
           myArray = value.multimedia[4].url
-          console.log(myArray)
+          console.log(value.url)
             }
         }
-          $(".display_list").append(`<img src=${myArray}></img>`);
-          $(".display_list").append(`<p class= "test">${value.title}</p>`);
+
+        $('.display_list').removeClass('gif-loader');
+
+          // $(".display_list").append(`<img class ="image" src=${myArray}></img>`);
+          // $(".display_list").append(`<a href=${value.url}><p class= "test">${value.title}</p></a>`);
         // } else {
         //   key++;
         // }
@@ -36,7 +43,7 @@ $(".select-menu").change(function() {
   });
 });
 
-
+});
 
 
 

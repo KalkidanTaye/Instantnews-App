@@ -4,6 +4,7 @@
 
 Instanews App is a website that provides news from New York Times API. It displays daily news of Arts, Business, Sport, Technology and Fashion.
 
+
 ## Installation
 Ensure you have [Node.js](https://nodejs.org/en/) installed first.
 
