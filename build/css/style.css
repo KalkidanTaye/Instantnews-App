@@ -166,6 +166,15 @@ body {
     padding: 20px;
     left: auto;
     right: auto; }
+  .container .display_list .gif-loader {
+    background-image: url(../../assets/images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 40px;
+    margin-left: 230px;
+    width: 80px;
+    height: 80px; }
 
 .container .gif-loader {
   background-image: url(../../assets/images/ajax-loader.gif);
@@ -219,11 +228,13 @@ body {
         margin-top: 210px;
         margin-left: -33%;
         padding-right: 5px; }
-    .container .gif-loader {
-      background-image: url(../../assets/images/ajax-loader.gif);
-      background-repeat: no-repeat;
-      width: 100px;
-      height: 100px; } }
+      .container .display_list .gif-loader {
+        background-image: url(../../assets/images/ajax-loader.gif);
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: 320px; } }
 
 @media only screen and (min-width: 1240px) {
   .container {
@@ -252,7 +263,9 @@ body {
       max-width: 25%;
       position: absolute;
       margin-left: -25%;
-      margin-top: 230px; } }
+      margin-top: 230px; }
+    .container .display_list .gif-loader {
+      margin-left: 350px; } }
 
 .footer {
   color: #c2c2c2;
@@ -266,5 +279,5 @@ body {
   .footer {
     text-align: left;
     margin-left: 60px;
-    margin-top: 200px;
+    margin-top: 600px;
     z-index: 50; } }
