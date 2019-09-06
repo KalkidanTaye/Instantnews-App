@@ -12,15 +12,16 @@ $(".select-menu").change(function() {
         $selection +
         ".json?api-key=6JnntmTCfFwazTbZ4Hd0rPbyYzVyUbtJ"
     )
+    
     .done(function(data) {
       $("p, img").remove();  
-         
+    
       $.each(data.results, function(key, value) {
           let i = 12, 
           myArray = new Array(i);
           for (i = 0; i < myArray.length; i++) {
-            if (value.multimedia[4] !== "") {
-          myArray = value.multimedia[4].url
+            if (value.multimedia.length !== 0) {
+                myArray = value.multimedia[4].url
           
             }
         }
