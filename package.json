@@ -5,7 +5,6 @@
   "author": "Kalkidan Alemu <kali.taye@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.26.7",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cssnano": "^1.1.0",
     "gulp-eslint": "^6.0.0",
@@ -15,7 +14,8 @@
   },
   "browserslist": "last 2 versions",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
     "gulp-build": "^0.0.1"
   }
 }
