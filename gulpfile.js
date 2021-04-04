@@ -6,6 +6,7 @@ sass = require("gulp-sass"),
 cssnano = require("gulp-cssnano"),
 autoprefixer = require("gulp-autoprefixer"),
 eslint = require("gulp-eslint"),
+build = require('gulp-build'),
 browserSync = require("browser-sync").create()
 
 gulp.task("eslint", function(){
@@ -59,3 +60,10 @@ gulp.task("scripts", function(){
     .pipe(rename({ extname: ".min.js" }))
     .pipe(gulp.dest("./build/js"))
 })
+
+ 
+gulp.task('build', function() {
+  gulp.src('scripts/*.js')
+      .pipe(build({ GA_ID: '123456' }))
+      .pipe(gulp.dest('./build'))
+});
